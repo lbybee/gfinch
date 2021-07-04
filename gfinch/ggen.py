@@ -34,7 +34,7 @@ def cli(label, msg, base_dir):
     msg = prep_msg(msg)
 
     # build initial content
-    template = resource_string("gfinch.templates", "experiment.py")
+    template = resource_string("templates", "experiment.py")
     template = template.decode("utf-8")
     template = Template(template)
     content = template.render(msg=msg, base_dir=base_dir, label=label)
